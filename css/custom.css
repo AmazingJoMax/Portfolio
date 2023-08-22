@@ -1,0 +1,123 @@
+:root{
+    --green: rgb(4, 220, 4);
+    --white: #fff;
+    --black: rgb(4, 4, 4);
+    --card-black: rgba(51,51,51, .3);
+}
+
+
+::-webkit-scrollbar{
+    background-color: var(--black);
+    background-color: 5px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+    scrollbar-width: thin;
+}
+
+
+ul{
+    list-style: none;
+}
+
+ul li::before{
+    content: "\2022";
+    color: rgb(4, 220, 4);
+    font-weight: bold;
+    display: inline-block;
+    width: 0.7em;
+    font-size: 1.4em;
+}
+
+.active{
+    color: var(--green) !important;
+}
+
+.bars{
+    position: fixed;
+    top: 2em;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10000;
+    transition: all .3s;
+    align-self: flex-end;
+    margin-right: 1.5em;
+    margin-top: 10px;
+    background-color: var(--card-black);
+    padding: 10px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.bar{
+    height: 3px;
+    width: 25px;
+    background: var(--green);
+    transform-origin: 0;
+    transition: all .4s;
+}
+
+.toggle{
+    position: absolute;
+}
+
+.close{
+    top: -350px !important;
+}
+
+.open{
+    height: fit-content;
+}
+
+
+.bars-rot > :nth-child(1){
+    transform: rotateZ(42deg);
+}
+
+.bars-rot :nth-child(2){
+    opacity: 0;
+}
+
+.bars-rot :nth-child(3){
+    transform: rotateZ(-42deg);
+}
+
+
+/* Width Percentage */
+
+.p10{
+    width: 10%;
+}
+.p20{
+    width: 20%;
+}
+.p30{
+    width: 30%;
+}
+.p40{
+    width: 40%;
+}
+.p45{
+    width: 45%;
+}
+.p60{
+    width: 60%;
+}
+.p65{
+    width: 65%;
+}
+.p70{
+    width: 70%;
+}
+.p75{
+    width: 75%;
+}
+.p80{
+    width: 80%;
+}.p85{
+    width: 85%;
+}

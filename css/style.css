@@ -1,0 +1,524 @@
+:root{
+    --green: rgb(4, 220, 4);
+    --white: #fff;
+    --black: rgb(6, 6, 6);
+    --card-black: rgba(51,51,51, 0.6);
+}
+    
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    background: var(--black);
+    color: var(--white);
+    padding: 20px;
+    margin-top: -1px;
+}
+
+.card{
+    background-color: var(--card-black) !important;
+    padding: 10px 20px;
+}
+
+.active{
+    color: var(--green);
+}
+
+.btn-active{
+    background-color: var(--green);
+}
+ 
+h2{
+    border-bottom: 3px solid var(--green);
+    justify-self: start !important;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.window-close{
+    visibility: hidden;
+}
+
+.window-open{
+    visibility: visible;
+}
+
+#window-box{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#window{
+    height: 529px;
+    width: fit-content;
+    z-index: 99999;
+    border: 2px solid var(--green);
+}
+
+#window .top-bar{
+    height: 25px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#window .top-bar .close{
+    background-color: rgb(184, 0, 0);
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#window iframe{
+    height: 500px;
+    width: 300px;
+}
+
+#home{
+    padding: 0;
+}
+
+.intro{
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../resources/images/bd1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    z-index: 222;
+}
+
+.intro h1{
+    z-index: 9;
+}
+
+.intro h1 strong{
+    color: var(--green);
+}
+
+.intro::before{
+    content: '';
+}
+
+.intro::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: #000; 
+    opacity: .6;
+}
+
+.navbar{
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    top: 0;
+}
+
+.navbar .menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    gap: 4%;
+    background-color: var(--card-black);
+    backdrop-filter: blur(8px);
+    border-bottom: 3px solid var(--green);
+    transition: all .5s;
+    flex-direction: column;
+}
+
+.navbar a{
+    width: 70%;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: start;
+    margin-left: 10%;
+}
+
+.navbar a:hover{
+    color: var(--green);
+}
+
+#about{
+    padding: 15px;
+}
+
+#about .card{
+    width: 100%;
+}
+
+.about-cards{
+    flex-direction: column;
+}
+
+#services{
+    width: 100%;
+}
+
+#services .grid{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#services .card{
+    text-align: center;
+}
+
+#services .card i{
+    color: var(--green);
+}
+
+.port-cards{
+    grid-template-columns: repeat(auto-fill ,minmax(320px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+
+.port-categories{
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    grid-template-columns: repeat(auto-fill , minmax(10px,80px));
+    margin-top: 20px;
+    text-align: center;
+}
+
+.port-categories a{
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.port-categories a:hover, .port-categories a:active{
+    background-color: var(--green);
+}
+
+
+.overlay{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    top: 0;
+    left: 0;
+    transition: opacity .2s ease-in;
+    transform: scale(1);
+}
+
+.overlay:not(:hover){
+    /* transform: scale(0); */
+    opacity: 0;
+}
+
+.overlay a{
+    color: var(--white);
+}
+
+.pic-card{
+    position: relative;
+    justify-self: center;
+    align-self: flex-start;
+    background: var(--card-black);
+    margin: 15px 0;
+    padding: 10px;
+    width: 300px;
+    z-index: 3;
+}
+
+.pic-card img{
+    width: 100%;
+}
+
+.tech-icons{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.tech-icons .card{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+}
+
+.tech-icons img{
+    z-index: 3;
+    width: 60px;
+    justify-self: center;
+    align-self: center;
+}
+
+.tech-icons .java img{
+    width: 80px;
+}
+
+.tech-icons .card-text{
+    z-index: 3;
+    font-weight: 800;
+}
+
+
+.card-progress-bar{
+    display: none;
+    /* background: hsl(120, 96%, 60%);
+    height: 100%;
+    position: absolute;
+    opacity: .1; */
+}
+
+#contact> .flex{
+    flex-direction: column;
+}
+
+.contact-form{
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    padding: 10px;
+}
+
+form, .form-control{
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-control label{
+    display: block;
+}
+
+.form-control input, 
+.form-control textarea{
+    max-width: 500px;
+    width: 100%;
+    resize: none;
+    background-color: var(--white);
+    outline-color: var(--green);
+    padding: 5px;
+    border: none;
+}
+
+
+.contact-form form > .form-control:last-child{
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact-form form :last-child{
+    gap: 30px;
+    height: fit-content;
+    width: 100%;
+}
+
+.form-control a{
+    padding: 5px 10px;
+    color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-control a i{
+    display: inline;
+}
+
+.form-control button {
+    max-width: 150px;
+    height: 100% !important ;
+}
+
+.form-control button:hover,
+.form-control a:hover{
+    transform: scale(0.9);
+}
+
+.social{
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social a{
+    color: var(--white);
+}
+
+.other-contact{
+    flex-direction: column;
+}
+
+.social{
+    margin-top: 20px;
+}
+
+
+.other-contact a{
+    color: #fff;
+}
+
+.form-control button{
+    padding: 5px 10px;
+    background: var(--green);
+    border: none;
+    border-radius: 5px;
+    width: 5rem;
+    font-size: 1.3rem;
+    color: var(--white);
+    font-weight: bold;
+    justify-self: center;
+}
+
+
+footer{
+    background: var(--green);
+    text-align: center;
+    font-weight: 800;
+    color: var(--white);
+}
+
+
+
+/* Desktop Query*/
+
+@media only screen and (min-width: 760px) {
+
+    .close{
+        top: 0 !important;
+    }
+
+    h2{
+        width: 30%;
+    }
+
+    #window{
+        height: 534px;
+    }
+    
+    #window .top-bar{
+        height: 30px;
+    }
+    
+    #window .top-bar .close{
+        height: 30px;
+        width: 30px;
+    }
+    
+    #window iframe{
+        height: 500px;
+        width: 700px;
+    }
+    
+
+    .about-cards{
+        flex-direction: row;
+    }
+
+    .navbar .menu{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+        padding: 10px 0;
+    }
+
+    .navbar a{
+        width: fit-content;
+        color: var(--white);
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .bars{
+        display: none;
+    }
+
+    #technologies .tech-icons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #contact> .flex{
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: row-reverse;
+        gap: 15px;
+    }
+
+    .contact-flex-a, .contact-flex-b{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contact-flex-a{
+        margin: 5rem 0;
+    }
+
+    .social{
+        width: fit-content;
+    }
+}

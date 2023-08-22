@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxwell Oba-Joshua</title>
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./Fontawesome_pro_v6/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="checkbox" class="toggle" 
+    onclick="toggle()" hidden>
+    <div id="window-box" class="window-open">
+        <div id="window">
+            <div class="top-bar"> <span class="close" onclick="closeWindow()">X</span> </div>
+            <iframe src="https://me.com" frameborder="0" name="window"></iframe>
+        </div>
+    </div>
+    <section id="home" class="sec">
+        <div class="intro">
+            <nav class="navbar flex col">
+                <div class="menu flex close">
+                    <a href="#home" data-scroll="home">HOME</a>
+                    <a href="#about" data-scroll="about">ABOUT</a>
+                    <a href="#services" data-scroll="services">SERVICES</a>
+                    <a href="#portfolio" data-scroll="portfolio">PORTFOLIO</a>
+                    <a href="#contact" data-scroll="contact">CONTACT</a>
+                </div>
+                <label for="checkbox" class="bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+            </nav>
+            <h1>
+                Hello I'm <br> <strong>Maxwell Oba-Joshua</strong>
+            </h1>
+        </div>
+
+    </section>
+
+    <section id="about" class="flex col sec">
+        <h2>WHO I AM</h2>
+        <div class="about-cards flex gap-20">
+            <div class="card">
+                <p>
+                    I am a full stack web developer from Nigeria and I currently 
+                    reside in Akure Ondo State.
+                    I started web development in the year 2020. <br>
+                    I am also vast in other programming languages like Python and Java.
+                </p>
+            </div>
+            <div class="card"> 
+                <ul>
+                    <li>Birthday: July 18</li>
+                    <li>Lives in Akure</li>
+                    <li>Graduated from high school 2021</li>
+                    <li>Studying Computer Science at UoPeople</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="sec ">
+        <h2 data-aos="fade-right">WHAT I DO</h2>
+        <div class="grid">
+            <div class="web card flex col">
+                <i class="fa fa-globe fa-2x"></i>     
+                <span>WEB DEVELOPMENT</span>
+            </div>
+            <div class="android card flex col">
+                <i class="fa fa-mobile-alt fa-2x"></i>     
+                <span>MOBILE APP DEV</span>
+            </div>
+            <!-- <div class="graphics card flex col">
+                <i class="fa fa-brush fa-2x"></i>     
+                <span>GRAPHICS DESIGN</span>
+            </div> -->
+            <div class="ai card flex col">
+                <i class="fa fa-robot fa-2x"></i>     
+                <span>AI DEVELOPMENT</span>
+            </div>
+        </div>
+    </section>
+    <section id="technologies" class="sec">
+        <h2 data-aos="fade-right"><span>TECHNOLOGIES </span>I USE</h2>
+        <div class="tech-icons">
+            <div class="card html">
+                <img src="./resources/images/html.png" alt="">
+                <span class="card-text">HTML 5</span>
+                <span class="card-progress-bar p85">
+                </span>
+            </div>
+            <div class="card css">
+                <img src="./resources/images/css.png" alt="">
+                <span class="card-text">CSS 3</span>
+                <span class="card-progress-bar p60">
+                </span>
+            </div>
+            <div class="card php">
+                <img src="./resources/images/php.png" alt="">
+                <span class="card-text">PHP</span>
+                <span class="card-progress-bar p80">
+                </span>
+            </div>
+            <div class="card js">
+                <img src="./resources/images/js.png" alt="">
+                <span class="card-text">JAVASCRIPT</span>
+                <span class="card-progress-bar p45">
+                </span>
+            </div>
+            <div class="card laravel">
+                <img src="./resources/images/laravel.png" alt="">
+                <span class="card-text">LARAVEL</span>
+                <span class="card-progress-bar p30">
+                </span>
+            </div>
+            <div class="card mysql">
+                <img src="./resources/images/mysql.png" alt="">
+                <span class="card-text">MYSQL DB</span>
+                <span class="card-progress-bar p75">
+                </span>
+            </div>
+            <div class="card python">
+                <img src="./resources/images/python.png" alt="">
+                <span class="card-text">PYTHON</span>
+                <span class="card-progress-bar p65">
+                </span>
+            </div>
+            <div class="card tailwind">
+                <img src="./resources/images/tailwind.png" alt="">
+                <span class="card-text">TAILWIND CSS</span>
+                <span class="card-progress-bar p20">
+                </span>
+            </div>
+            <div class="card java">
+                <img src="./resources/images/java.png" alt="">
+                <span class="card-text">JAVA</span>
+                <span class="card-progress-bar p40">
+                </span>
+            </div>
+            <!-- <div class="card cdr" data-aos="fade-left">
+                <img src="./resources/images/coreldraw.png" alt="">
+            </div> -->
+        </div>
+    </section>
+    <section id="portfolio" class="sec">
+        <h2 data-aos="fade-right">PROJECTS I WORKED <span>ON</span></h2>
+        <div class="port-categories grid">
+            <a href="#" class="btn" data-filter="all">All</a>
+            <a href="#" class="btn" data-filter="ai" >AI</a>
+            <a href="#" class="btn" data-filter="mobile">Mobile</a>
+            <!-- <a href="#" class="btn" data-filter="" >Graphics</a> -->
+            <a href="#" class="btn" data-filter="web" >Web</a>
+        </div>
+        <div class="port-cards grid">
+            <div class="pic-card otanajay web" data-id="1">
+                <div class="overlay">
+                    <a href="https://maxwell-joshua.netlify.app" target="window"><i class="fa fa-external-link fa-2x" onclick="openWindow()"></i></a>
+                    <a href=""><i class="fab fa-github fa-2x"></i></a>
+                </div>
+                <img src="./resources/images/otanajay.png" alt="">
+                <p>Otanajay Apparels is a fully functional and full-stack website 
+                    for fashion designers created with vanilla PHP and MySQL DB
+                </p>
+            </div>
+            <div class="pic-card trapezium web" data-id="2">
+                <div class="overlay">
+                    <a href=""><i class="fa fa-external-link fa-2x" onclick="openWindow()"></i></a>
+                    <a href=""><i class="fab fa-github fa-2x"></i></a>
+                </div>
+                <img src="./resources/images/laragigs.png" alt="">
+                <p>
+                    Trapezium is a full-stack job listing web 
+                    application built on Laravel 9, Tailwind css and MySQL DB
+                </p>
+            </div>
+            <div class="pic-card loruki web" data-id="3">
+                <div class="overlay">
+                    <a href="https://lorukihostingsample.netlify.app" target="window"><i class="fa fa-external-link fa-2x" onclick="openWindow()"></i></a>
+                    <a href=""><i class="fab fa-github fa-2x"></i></a>
+                </div>
+                <img src="./resources/images/loruki.png" alt="">
+                <p>
+                  Loruki is a platform for hosting websites. It is just a 
+                  frontend concept for now
+                </p>
+            </div>
+            <div class="pic-card v-music mobile" data-id="4">
+                <div class="overlay">
+                    <a href=""><i class="fa fa-external-link fa-2x" onclick="openWindow()"></i></a>
+                    <a href=""><i class="fab fa-github fa-2x"></i></a>
+                </div>
+                <img src="./resources/images/vmusic.png" alt="">
+                <p>
+                    Vanilla music is an android application that works with spotify API
+                    to provide users access to millions of songs on-the-go
+                </p>
+            </div>
+            <div class="pic-card v-calc mobile" data-id="5">
+                <div class="overlay">
+                    <a href=""><i class="fa fa-external-link fa-2x" onclick="openWindow()"></i></a>
+                    <a href=""><i class="fab fa-github fa-2x"></i></a>
+                </div>
+                <img src="./resources/images/vcalc.png" alt="">
+                <p>
+                    Vanilla calculator is a small android application that provide 
+                    users with the ability to perform basic calculaions and it also
+                    comes with some built-in calculators like an inverter and solar
+                    calculator, shape area and volume calculator and the likes
+                </p>
+            </div>
+            <div class="pic-card v-calc ai" data-id="6">
+                <div class="overlay">
+                    <a href=""><i class="fa fa-external-link fa-2x" onclick="openWindow()"></i></a>
+                    <a href=""><i class="fab fa-github fa-2x"></i></a>
+                </div>
+                <img src="./resources/images/mike.png" alt="">
+                <p>
+                    Mike AI is a python based artificial intelligence that uses 
+                    vioce command to create and edit a to-do list
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="sec">
+        <h2 data-aos="fade-right">GET IN <span>TOUCH</span></h2>
+        <div class="flex">
+            
+            <div class="contact-flex-a flex col ">
+                <div class="location">
+                    <i class="fa fa-map-marker-alt"></i>
+                    Imafon Community, Igbatoro Rd. Akure Ondo State
+                </div>
+                <div class="other-contact flex">
+                    <div class="phone">
+                        <i class="fa fa-phone-alt"></i>
+                        <a href="tel:+2347038055097">
+                            +234-703-805-5097
+                        </a>
+                    </div>
+                    <div class="email">
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:joshuaademax@gmail.com">
+                            joshuaademax@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="flex social">
+                    <a href="https://www.linkedin.com/in/maxwell-joshua-448a71247" target="_blank">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://wa.me/2347038055097" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/maxwell_joshua17" target="_blank">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/amazingjomax/" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-flex-b flex">
+                <div class="contact-form">
+                    <form action="POST" data-netlify="true">
+                        <div class="form-control">
+                            <label for="">
+                                Name
+                            </label>    
+                            <input type="text" name="name">
+                        </div>
+                        <div class="form-control">
+                            <label for="">
+                                Phone
+                            </label>
+                            <input type="text" name="phone" placeholder="(Preferably Whatsapp)">
+                        </div>
+                        <div class="form-control">
+                            <label for="">
+                                Subject
+                            </label>
+                            <input type="text" name="subject">
+                        </div>
+                        <div class="form-control">
+                            <label for="">
+                                Message
+                            </label>
+                            <textarea name="message" id=""  rows="8"></textarea>
+                        </div>
+                        <div class="form-control">
+                            <a href="./resources/Maxwell oba-Joshua.jpg" download>
+                                Download CV 
+                                <!-- <i class="fas fa-download"></i> -->
+                            </a>
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>&copy;2023</footer>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/scrollspy.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
